@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 // PHP SDK: https://github.com/razorpay/razorpay-php
 use Razorpay\Api\Api;
@@ -9,5 +9,4 @@ $api->utility->verifyWebhookSignature($webhookBody, $webhookSignature, $webhookS
 echo "hello";
 echo $webhookBody;
 
-?> -->
-hello
+?>
