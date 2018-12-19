@@ -3,10 +3,10 @@ Hello
 Hello 2
 
 <?php
-// PHP SDK: https://github.com/razorpay/razorpay-php
+include '/vendor/razorpay/Razorpay.php';
 use Razorpay\Api\Api;
-$api = new Api("rzp_test_sEA6555roiMFZP", "");
-$api->utility->verifyWebhookSignature($webhookBody, $webhookSignature, $webhookSecret);
-echo "hello";
-echo $webhookBody;
+$api = new Api('Secret ID', 'Secret Key');
+$payment = $api->payment->fetch($_REQUEST['billno']);
+echo $payment->amount;
+print_r($payment->notes);
 ?>
