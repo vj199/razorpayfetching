@@ -8,7 +8,7 @@ $api = new Api('rzp_test_sEA6555roiMFZP', 'PQLT3VqL00JLZbJ0GGy4uNlq');
 
 $api->utility->verifyWebhookSignature($webhookBody, $webhookSignature, $webhookSecret);
 
-
+echo $api;
 
 
 $payment = $api->payment->fetch($_REQUEST['billno']);
