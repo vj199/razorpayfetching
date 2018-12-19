@@ -1,7 +1,7 @@
 <?php
 
-include 'razorpay/Razorpay.php';
-use Razorpay\Api\Api;
+include '/vendor/razorpay/Razorpay.php';
+use razorpay\src\Api;
 
 $api = new Api('Secret ID', 'Secret Key');
 
