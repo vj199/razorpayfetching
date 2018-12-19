@@ -3,7 +3,7 @@ Hello
 Hello 2
 
 <?php
-include 'razorpay/Razorpay.php';
+include '../vendor/razorpay/razorpay/Razorpay.php';
 use Razorpay\Api\Api;
 $api = new Api('Secret ID', 'Secret Key');
 $payment = $api->payment->fetch($_REQUEST['billno']);
