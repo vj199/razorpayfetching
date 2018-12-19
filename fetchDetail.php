@@ -1,12 +1,13 @@
 <?php
 
-// PHP SDK: https://github.com/razorpay/razorpay-php
-use razorpay\razorpay\Api;
-$api = new Api("rzp_test_sEA6555roiMFZP", "");
+include 'razorpay/Razorpay.php';
+use Razorpay\Api\Api;
 
-$api->utility->verifyWebhookSignature($webhookBody, $webhookSignature, $webhookSecret);
+$api = new Api('Secret ID', 'Secret Key');
 
-echo "hello";
-echo $webhookBody;
+$payment = $api->payment->fetch($_REQUEST['billno']);
+
+echo $payment->amount;
+print_r($payment->notes);
 
 ?>
